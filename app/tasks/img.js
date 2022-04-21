@@ -10,7 +10,7 @@ function img() {
     //   verbose: true,
     // }))
 
-    .pipe(dest('./public/image'))
+    .pipe(dest('./public/images'))
 }
 
 module.exports = img;

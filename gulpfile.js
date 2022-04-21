@@ -35,7 +35,7 @@ function startWatch() {
   watch('app/scss/**/*.scss', styles)
     .on("all", browserSync.reload)
 
-  watch('app/image/**/*.*', series(clearImg, img))
+  watch('app/images/**/*.*', series(clearImg, img))
     .on("all", browserSync.reload)
 }
 

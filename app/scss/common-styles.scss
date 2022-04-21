@@ -1,0 +1,72 @@
+@include font("merriweather-light-italic", "Merriweather-LightItalic", "300", "italic");
+@include font("montserrat-bold", "Montserrat-Bold", "700", "normal");
+@include font("montserrat-light", "Montserrat-Light", "300", "normal");
+@include font("openSans-bold", "OpenSans-Bold", "700", "normal");
+@include font("openSans-light", "OpenSans-Light", "300", "normal");
+@include font("openSans-regular", "OpenSans-Regular", "400", "normal");
+@include font("openSans-semiBold", "OpenSans-SemiBold", "600", "normal");
+@include font("realwayBold", "OpenSans-SemiBold", "600", "normal");
+
+body._lock {
+  overflow: hidden;
+}
+body {
+  font-family: "openSans-light", sans-serif;
+}
+.container {
+  max-width: 1197px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.logo {
+  max-width: 42px;
+
+  &__link {
+    path {
+      transition: 0.3s all ease;
+    }
+    &:hover {
+      path {
+        fill: #fcbb08;
+      }
+    }
+  }
+  @media (max-width: 600px) {
+    svg {
+      height: 30px;
+      width: 30px;
+    }
+  }
+}
+
+.title {
+  font-family: "montserrat-bold", sans-serif;
+  font-weight: 700;
+  font-size: 60px;
+  letter-spacing: -1.65px;
+  color: #242121;
+  position: relative;
+  line-height: 125%;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 2px;
+    background: #fcbb08;
+    bottom: -14px;
+  }
+  @media (max-width: 500px) {
+    font-size: 30px;
+    &::before {
+      bottom: -5px;
+      width: 30px;
+    }
+  }
+}
+.text {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+  color: #373a39;
+}
