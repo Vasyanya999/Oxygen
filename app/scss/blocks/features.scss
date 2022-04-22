@@ -1,0 +1,37 @@
+.section__features {
+  margin-top: 164px;
+}
+
+.features {
+  background: #f6f8fa;
+  &__content {
+    display: flex;
+  }
+
+  &__image {
+    position: relative;
+    flex: 0 0 573px;
+    min-height: 840px;
+    img {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  &__body {
+    margin-left: 130px;
+    margin-top: 101px;
+  }
+
+  &__title {
+  }
+
+  &__info {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 171%;
+    color: #373a39;
+    margin-top: 67px;
+  }
+}

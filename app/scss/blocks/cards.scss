@@ -4,17 +4,72 @@
 .cards {
   &__row {
     display: flex;
+    column-gap: 30px;
   }
 
   &__item {
+    position: relative;
+    padding-left: 89px;
+    flex: 0 1 33%;
   }
 
   &__item-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    &--monitor {
+      top: -3px;
+    }
+    &--speaker {
+      top: -8.93px;
+    }
   }
 
   &__item-subject {
+    font-family: "realwayBold", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 143%;
+    letter-spacing: 4.29px;
+    color: #333333;
+    margin-bottom: 14px;
   }
 
   &__item-description {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 171%;
+    color: #777777;
+  }
+}
+@media (max-width: 1050px) {
+  .cards {
+    &__row {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    &__item {
+      flex: 0 1 40%;
+      margin-bottom: 60px;
+    }
+  }
+}
+@media (max-width: 779.999px) {
+  .cards {
+    &__row {
+    }
+    &__item {
+      flex: 0 1 80%;
+    }
+  }
+}
+@media (max-width: 500px) {
+  .cards {
+    &__row {
+    }
+    &__item {
+      flex: 0 1 100%;
+      padding-left: 65px;
+    }
   }
 }
