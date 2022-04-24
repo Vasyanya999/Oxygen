@@ -13,7 +13,9 @@ const styles = require('./app/tasks/styles')
 const scripts = require('./app/tasks/scripts')
 const font = require('./app/tasks/font')
 const img = require('./app/tasks/img')
+const video = require('./app/tasks/video')
 const clearImg = require('./app/tasks/clearImg')
+const clearVideo = require('./app/tasks/clearVideo')
 const clear = require('./app/tasks/clear')
 
 function server() {
@@ -37,16 +39,19 @@ function startWatch() {
 
   watch('app/images/**/*.*', series(clearImg, img))
     .on("all", browserSync.reload)
+
+  watch('app/video/**/*.*', series(clearVideo, video))
+    .on("all", browserSync.reload)
 }
 
 const build = series(
   clear,
-  parallel(html, styles, scripts, font, img)
+  parallel(html, styles, scripts, font, img, video)
 )
 
 const dev = series(
   clear,
-  parallel(html, styles, scripts, img, font),
+  parallel(html, styles, scripts, img, font, video),
   parallel(startWatch, server)
 )
 
@@ -58,6 +63,8 @@ exports.font = font;
 exports.img = img;
 exports.clearImg = clearImg;
 exports.clear = clear;
+exports.clearVideo = clearVideo;
+exports.video = video;
 
 exports.server = server;
 exports.startWatch = startWatch;

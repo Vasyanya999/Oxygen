@@ -1,0 +1,33 @@
+.section__testompnial {
+  margin: 130px 0 0 0;
+}
+.testimonial {
+  font-family: "merriweather-light-italic", sans-serif;
+  font-style: italic;
+  font-weight: 300;
+  text-align: center;
+  &__container {
+    max-width: 650px;
+    margin: 0 auto;
+  }
+
+  &__description {
+    font-size: 18px;
+    line-height: 200%;
+    color: #242121;
+    margin-bottom: 51px;
+  }
+
+  &__name {
+    font-size: 14px;
+    line-height: 229%;
+    color: #9e9e9e;
+  }
+}
+@media (max-width: 600px) {
+  .testimonial {
+    .section__testompnial {
+      margin: 80px 0 0 0;
+    }
+  }
+}
